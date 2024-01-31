@@ -9,6 +9,9 @@ def mergeAlternately(word1, word2):
         merged_str += word2[len(word1):]
     return merged_str
         
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 word1 = "abc"
 word2 = "pqr"
 assert mergeAlternately(word1, word2) == "apbqcr"
