@@ -1,13 +1,10 @@
 def kidsWithCandies(candies, extraCandies):
-    is_greatest = [False] * len(candies)
-    max_list = []
-    for idx, value in enumerate(candies):
-        value1 = value + extraCandies
-        if idx<=len(candies)-1 and value1 >= max(candies) and value not in max_list:
-            is_greatest[idx] = True
-            max_list.append(value)
-        elif value in max_list:
-            is_greatest[idx] = True
+    is_greatest =[]
+    for candy in candies:
+        if candy + extraCandies >= max(candies):
+            is_greatest.append(True)
+        else:
+            is_greatest.append(False)
     return is_greatest
 
 # Time Complexity: O(n)
