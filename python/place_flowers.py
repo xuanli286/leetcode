@@ -5,12 +5,12 @@ def canPlaceFlowers(flowerbed, n):
             if value == 0:
                 if idx == 0 and flowerbed[idx+1] == 0:
                     placeable_count += 1
-                    flowerbed[idx] = 1
+                    idx += 1
                 elif idx == len(flowerbed)-1 and flowerbed[idx-1] == 0:
                     placeable_count += 1
                 elif flowerbed[idx-1] == 0 and flowerbed[idx+1] == 0:
-                    flowerbed[idx] = 1
                     placeable_count += 1
+                    idx += 1
         if placeable_count >= n:
             return True
         return False   
